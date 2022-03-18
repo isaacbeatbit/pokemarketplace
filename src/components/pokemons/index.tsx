@@ -69,6 +69,7 @@ function Pokemons({
               <Card {...pokemon} key={pokemon.id} />
             ))}
           </div>
+          <Pagination limit={limit} offset={offset} />
         </div>
       </main>
     </>
