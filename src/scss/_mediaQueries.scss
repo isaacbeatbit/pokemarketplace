@@ -1,0 +1,40 @@
+$xs: 599px;
+$sm: 904px;
+$md: 1239px;
+$lg: 1439px;
+
+// EXTRA SMALL
+@mixin xs {
+  @media only screen and (min-width: 0) and (max-width: $xs) {
+    @content;
+  }
+}
+
+// SMALL
+@mixin sm {
+  @media (min-width: $xs + 1) and (max-width: $sm) {
+    @content;
+  }
+}
+
+// MEDIUM
+@mixin md {
+  @media (min-width: $sm + 1) and(max-width: $md) {
+    @content;
+  }
+}
+
+/// LARGE
+@mixin lg {
+  @media (min-width: $md + 1) and (max-width: $lg) {
+    @content;
+  }
+}
+
+// EXTRA LARGE
+
+@mixin xl {
+  @media (min-width: $lg + 1) {
+    @content;
+  }
+}

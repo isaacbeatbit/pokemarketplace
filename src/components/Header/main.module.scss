@@ -1,0 +1,19 @@
+@import '../../scss/utils/layout.module';
+
+.container {
+  @include container;
+  background: #fff;
+  position: fixed;
+  top: 0;
+}
+
+.content {
+  @include content;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+}

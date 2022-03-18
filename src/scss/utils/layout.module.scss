@@ -1,0 +1,15 @@
+@import '../../scss/layout';
+
+.container {
+  @include container;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  @include content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

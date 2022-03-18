@@ -1,0 +1,61 @@
+$yellow: #feca1b;
+$blue: #3761a8;
+
+.container {
+  margin: 8rem 0 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.pagination {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+
+// BUTTONS
+.button {
+  border-radius: 0.5rem;
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  padding: 0.5rem 0;
+  border: none;
+  background: $blue;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.disabled {
+  background: rgba($blue, 0.6);
+
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
+.paddingPrev {
+  padding-right: 1rem;
+  padding-left: 0.5rem;
+}
+
+.paddingNext {
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}

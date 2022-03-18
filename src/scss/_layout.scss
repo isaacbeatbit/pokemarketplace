@@ -1,0 +1,52 @@
+@import './mediaQueries';
+
+@mixin lyXs {
+  padding: 0 1rem;
+}
+
+@mixin lySm {
+  padding: 0 2rem;
+}
+
+@mixin lyMd {
+  max-width: 52.5rem;
+}
+
+@mixin lyLg {
+  padding: 0 12.5rem;
+}
+
+@mixin lyXl {
+  max-width: 65rem;
+}
+
+// CONTAINERS
+
+@mixin container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include xs {
+    @include lyXs;
+  }
+
+  @include sm {
+    @include lySm;
+  }
+
+  @include lg {
+    @include lyLg;
+  }
+}
+
+@mixin content {
+  width: 100%;
+
+  @include md {
+    @include lyMd;
+  }
+  @include xl {
+    @include lyXl;
+  }
+}
