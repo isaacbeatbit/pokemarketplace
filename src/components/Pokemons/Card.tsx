@@ -1,4 +1,5 @@
-import { TPokemon } from '../../types'
+import { Query, TPokemon } from '../../types'
+import Rating from './Rating'
 import styles from './scss/card.module.scss'
 
 function Tag({ name }: { name: string }) {
@@ -18,25 +19,24 @@ function Tags({ name, tags }: { name: string; tags: Array<{ name: string }> }) {
   )
 }
 
-function Card({ name, sprites, types, abilities }: TPokemon) {
-  const {
-    other: {
-      'official-artwork': { front_default: frontDefault }
-    }
-  } = sprites
-
-  const typeTags = types.map(({ type: { name } }) => ({ name }))
-  const abilitiesTags = abilities.map(({ ability: { name } }) => ({ name }))
-
+function Card({
+  name,
+  image,
+  types,
+  abilities,
+  stars,
+  refetch
+}: TPokemon & any) {
   return (
     <article className={styles.card}>
       <div className={styles.container}>
-        <img alt={name} className={styles.image} src={frontDefault} />
+        <img alt={name} className={styles.image} src={image} />
+        <Rating refetch={refetch} stars={stars} name={name} />
       </div>
       <div className={styles.footer}>
         <h2 className={styles.name}>{name}</h2>
-        <Tags name="Types" tags={typeTags} />
-        <Tags name="Abilities" tags={abilitiesTags} />
+        <Tags name="Types" tags={types} />
+        <Tags name="Abilities" tags={abilities} />
       </div>
     </article>
   )

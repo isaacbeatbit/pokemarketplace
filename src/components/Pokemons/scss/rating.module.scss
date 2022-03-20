@@ -1,0 +1,25 @@
+$blue: #3761a8;
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button {
+  border-radius: 0.5rem;
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: $blue;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

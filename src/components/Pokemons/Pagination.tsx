@@ -1,7 +1,5 @@
-import { Query, TPokemon } from '../../types'
-import Card from './Card'
+import { Query } from '../../types'
 import { useRouter } from 'next/router'
-import layout from '../../scss/utils/layout.module.scss'
 import styles from './scss/main.module.scss'
 
 function Pagination({ limit, offset }: Query) {
@@ -47,33 +45,4 @@ function Pagination({ limit, offset }: Query) {
   )
 }
 
-function Pokemons({
-  limit,
-  offset,
-  pokemons
-}: Query & { pokemons: Array<TPokemon> | null }) {
-  if (!pokemons) {
-    return <div>loading ...</div>
-  }
-
-  const containerClasses = layout.container + ' ' + styles.container
-  const contentClasses = layout.content + ' ' + styles.content
-
-  return (
-    <>
-      <main className={containerClasses}>
-        <div className={contentClasses}>
-          <Pagination limit={limit} offset={offset} />
-          <div className={styles.cards}>
-            {pokemons.map(pokemon => (
-              <Card {...pokemon} key={pokemon.id} />
-            ))}
-          </div>
-          <Pagination limit={limit} offset={offset} />
-        </div>
-      </main>
-    </>
-  )
-}
-
-export default Pokemons
+export default Pagination

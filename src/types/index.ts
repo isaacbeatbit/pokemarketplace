@@ -3,37 +3,19 @@ export type Query = {
   limit: number
 }
 
-export type SimplePokemon = {
-  name: string
-  url: string
-}
-
-export type SimplePokemons = {
-  results: Array<SimplePokemon>
-}
-
 export type TType = {
-  type: {
-    name: string
-  }
+  name: string
 }
 
 type Ability = {
-  ability: {
-    name: string
-  }
+  name: string
 }
 
 export type TPokemon = {
   abilities: Array<Ability>
   id: number
   name: string
-  sprites: any
+  image: string
   types: Array<TType>
-}
-
-export type SpecificPokemonData = {
-  limit: number
-  offset: number
-  pokemons: Array<TPokemon>
+  stars: number
 }

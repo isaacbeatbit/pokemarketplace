@@ -11,10 +11,11 @@ $blue: #3761a8;
   display: flex;
   justify-content: center;
   width: 16rem;
-  height: 16rem;
+  //height: 18rem;
   align-items: center;
   border: thin solid $blue;
   transition: 0.15s all;
+  flex-direction: column;
 }
 
 .image {
