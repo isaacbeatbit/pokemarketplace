@@ -24,7 +24,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (networkError) console.log(`[Network error]: ${networkError}`)
 })
 
-const url = 'https://pokeapigraphqldb.herokuapp.com/'
+const url = 'pokeapigraphqldb.herokuapp.com/'
 
 const wsLink = new GraphQLWsLink(
   createClient({
