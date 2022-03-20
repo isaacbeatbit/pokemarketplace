@@ -58,6 +58,8 @@ export function useClient(): any {
   const [persistor, setPersistor] =
     useState<CachePersistor<NormalizedCacheObject>>()
 
+  console.log(persistor)
+
   useEffect(() => {
     const newPersistor = new CachePersistor({
       cache,

@@ -1,4 +1,4 @@
-import { Query, TPokemon } from '../../types'
+import { TPokemon } from '../../types'
 import Rating from './Rating'
 import styles from './scss/card.module.scss'
 
